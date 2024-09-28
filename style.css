@@ -1,0 +1,53 @@
+main {
+    height: 100vh;
+    background-image: url("./assets/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15%;
+    padding-top: 10%;
+}
+div.scoreBlock {
+    height: 80px;
+    width: 80%;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    column-gap: 40px;
+    padding: 15px;
+    font-size: 20px;
+    color: #ffffff;
+    border: 1px solid #4c5e50;
+    background-color: #393d3766;
+    border-radius: 50px;
+}
+
+.scorePlayer, .scoreBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.scorePlayer img {
+    height: 40px;
+    width: 40px;
+}
+
+td {
+    height: 75px;
+    width: 75px;
+    margin: 3px 4px;
+    border: 2px solid #999b95;
+    background-color: #6e756640;
+    border-radius: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    height: 55px;
+    width: 55px;
+}
