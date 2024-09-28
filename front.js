@@ -1,6 +1,9 @@
 import {Game} from "./game.js";
+import {EventEmitter} from "./eventEmitter.js";
 
-const game = new Game();
+const eventEmitter = new EventEmitter();
+
+const game = new Game(eventEmitter);
 game.settings.gridSize = {
     columns: 4,
     rows: 4,
@@ -11,6 +14,7 @@ const tableElement = document.getElementById("grid");
 game.start()
 
 const render = () => {
+    tableElement.innerHTML = "";
 
     for (let y = 1; y <= game.settings.gridSize.rows; y++) {
         const trElement = document.createElement("tr");
@@ -47,3 +51,5 @@ const render = () => {
 }
 
 render()
+
+game.eventEmitter.subscribe('changePosition', render)

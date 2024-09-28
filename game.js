@@ -17,6 +17,11 @@ export class Game {
         2: {points: 0}
     }
 
+    // dependency injection - подход, когда мы создаем инстанс класса вне другого класса и передаем через конструктор
+    constructor(eventEmitter) {
+        this.eventEmitter = eventEmitter;
+    }
+
     #getRandomPosition(takenPosition = []) {
         let newX;
         let newY;
@@ -36,6 +41,8 @@ export class Game {
             this.#getRandomPosition([this.#player1.position, this.#player2.position]) :
             this.#getRandomPosition([this.#player1.position, this.#player2.position, this.#google.position])
         this.#google = new Google(googlePosition);
+
+        this.eventEmitter.emit('changePosition')
     }
 
     #createUnits() {
