@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <script src="front.js" defer type="module"></script>
+    <style>
+        main {
+            height: 100vh;
+            background-image: url("./assets/bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 15%;
+            padding-top: 10%;
+        }
+        td {
+            height: 75px;
+            width: 75px;
+            margin: 3px 4px;
+            border: 2px solid #999b95;
+            background-color: #6e756640;
+            border-radius: 8px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            height: 55px;
+            width: 55px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="scoreBlock">
+            <div class="scorePlayer">
+                <img src="./assets/first.svg" alt="player image">
+                <span>Player 1: <span id="score1">0</span></span>
+            </div>
+            <div class="scorePlayer">
+                <img src="./assets/second.svg" alt="player image">
+                <span>Player 2: <span id="score2">0</span></span>
+            </div>
+        </div>
+        <table id="grid">
+            <tr>
+                <td>
+                    <img src="./assets/first.svg" alt="player image">
+                </td>
+                <td>
+                    <img src="./assets/second.svg" alt="player image">
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="./assets/google.svg" alt="google image">
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </main>
+    <!--<div id="root"></div>-->
+</body>
+</html>

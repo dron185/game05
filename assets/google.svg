@@ -1,0 +1,17 @@
+<svg width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip1400_829">
+			<rect id="google-color-svgrepo-com 1" rx="-0.500000" width="47.000000" height="47.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="google-color-svgrepo-com 1" rx="-0.500000" width="47.000000" height="47.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip1400_829)">
+		<path id="Fill-1" d="M10.32 24C10.32 22.47 10.58 21.01 11.03 19.64L3.12 13.6C1.58 16.73 0.71 20.26 0.71 24C0.71 27.73 1.58 31.26 3.12 34.38L11.02 28.33C10.57 26.97 10.32 25.51 10.32 24Z" fill="#FBBC05" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Fill-2" d="M24.21 10.13C27.52 10.13 30.51 11.3 32.86 13.22L39.7 6.39C35.53 2.77 30.19 0.53 24.21 0.53C14.92 0.53 6.94 5.84 3.12 13.6L11.03 19.64C12.85 14.11 18.04 10.13 24.21 10.13Z" fill="#EB4335" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Fill-3" d="M24.21 37.86C18.04 37.86 12.85 33.88 11.03 28.35L3.12 34.39C6.94 42.15 14.92 47.46 24.21 47.46C29.94 47.46 35.41 45.43 39.52 41.61L32.01 35.81C29.89 37.14 27.23 37.86 24.21 37.86Z" fill="#34A853" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Fill-4" d="M46.64 24C46.64 22.61 46.43 21.12 46.11 19.73L24.21 19.73L24.21 28.8L36.81 28.8C36.18 31.89 34.47 34.26 32.01 35.81L39.52 41.61C43.83 37.61 46.64 31.64 46.64 24Z" fill="#4285F4" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>
