@@ -55,6 +55,12 @@ export class Game {
         this.#moveGoogleToRandomPosition(true)
     }
 
+    #startGoogleJumpInterval() {
+        this.#googleJumpIntervalId = setInterval(() => {
+            this.#moveGoogleToRandomPosition(false)
+        }, this.#settings.googleJumpInterval);
+    }
+
     start() {
         if (this.#status === 'pending') {
             this.#status = 'in-progress';
@@ -62,9 +68,10 @@ export class Game {
 
         this.#createUnits(true)
 
-        this.#googleJumpIntervalId = setInterval(() => {
-            this.#moveGoogleToRandomPosition(false)
-        }, this.#settings.googleJumpInterval);
+        this.#startGoogleJumpInterval()
+        // this.#googleJumpIntervalId = setInterval(() => {
+        //     this.#moveGoogleToRandomPosition(false)
+        // }, this.#settings.googleJumpInterval);
     }
 
     stop() {
@@ -97,14 +104,18 @@ export class Game {
     #checkGoogleCatching(movingPlayer) {
         if (movingPlayer.position.equal(this.#google.position)) {
             this.#score[movingPlayer.id].points++
+
+            this.#moveGoogleToRandomPosition(false)
         }
 
         if (this.#score[movingPlayer.id].points === this.#settings.pointsToWin) {
             this.stop()
             this.#google = new Google(new Position(0, 0));
+            return
         }
 
-        this.#moveGoogleToRandomPosition(false)
+        clearInterval(this.#googleJumpIntervalId);
+        this.#startGoogleJumpInterval()
     }
 
     #movePlayer(movingPlayer, otherPlayer, step) {
@@ -120,6 +131,8 @@ export class Game {
             movingPlayer.position.y += step.y
         }
         this.#checkGoogleCatching(movingPlayer)
+
+        this.eventEmitter.emit('changePosition')
     }
 
     movePlayer1Right() {
